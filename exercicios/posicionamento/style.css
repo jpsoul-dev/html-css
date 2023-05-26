@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*Posicionando elementos utilizando Position e Transform*/
+.container {
+    height: 500px;
+    background-color: brown;
+    background-image: url('img/target001.png');
+    background-size: 100% 100%;
+    padding: 12px;
+    
+    position: relative;
+}
+
+.content {
+    height: 200px;
+    width: 300px;
+    background-color: gold;
+    margin: auto;
+    background-image: url('img/target001.png');
+    background-size: 100% 100%;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
