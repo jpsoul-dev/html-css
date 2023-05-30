@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem em tabelas</title>
+
+    <style>
+        body {
+            font-size: 1.5em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(43, 43, 43);
+            background-color: beige;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 1500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 12px 0px #00000048;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            margin-top: 26px;
+        }
+
+        table th,
+        table td {
+            border: 2px solid #0000009a;
+            padding: 8px 12px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        table caption {
+            background-color: rgb(212, 213, 214);
+            padding: 12px;
+        }
+
+        #tableNotas {
+            border: none;
+            padding: 0;
+        }
+
+        #tableNotas>table,
+        #tableNotas th {
+            margin: 0;
+            border-left: none;
+            border-right: none;
+        }
+
+        th {
+            background-color: azure;
+        }
+
+        col.cgrupo {
+            background-color: chartreuse;
+        }
+
+        div.container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Mesclagem de celulas</h1>
+        <table>
+            <caption>Este é um <code>&ltcaption&gt</code> (legenda da tabela)</caption>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td colspan="2"><code>colspan"2"</code></td>
+            </tr>
+            <tr>
+                <td rowspan="3"><code>rowspan="3"</code></td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+        </table>
+        <!-- Desafio Mesclagem 1-->
+        <table>
+            <caption>Exercício de mesclagem 1</caption>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2"><code>rowspan="2"</code></td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td colspan="3"><code>colspan="3"</code></td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><code>rowspan="2"</code></td>
+                <td colspan="2"><code>colspan="2"</code></td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+        </table>
+
+        <!--Exercício de mesclagem 2-->
+        <table>
+            <caption>Exercício mesclagem 2</caption>
+            <tr>
+                <td colspan="4"><code>colspan="4"</code></td>
+                <td rowspan="4"><code>rowspan="4"</code></td>
+            </tr>
+            <tr>
+                <td rowspan="4"><code>rowspan="4"</code></td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>L</td>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td colspan="4"><code>colspan="4"</code></td>
+            </tr>
+        </table>
+
+        <!--Exercício tabela 3-->
+
+        <Table>
+            <caption>Exercício tabela 3</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th colspan="3" scope="colgroup">Filmes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th rowspan="3" scope="rowgroup">Mulheres</th>
+                    <td>Ana Maria</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Claudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+                <tr>
+                    <th rowspan="3" scope="rowgroup">Homens</th>
+                    <td>Bruno Mendonça</td>
+                    <td>Intocáveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-E</td>
+                    <td>Oldboy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+
+            </tfoot>
+        </Table>
+
+        <!--Desafio tabelas 1-->
+
+        <div class="container">
+            <table>
+                <caption> Desafio Tabelas 1</caption>
+                <thead>
+                    <tr>
+                        <th>Área</th>
+                        <th>Disciplinas</th>
+                        <th colspan="2" id="tableNotas">
+                            <table>
+                                <tr>
+                                    <th colspan="2">Notas</th>
+                                </tr>
+                                <tr>
+                                    <th>Nota </th>
+                                    <th>Nota 2</th>
+                                </tr>
+                            </table>
+                        </th>
+                        <th>Média</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">Exatas</th>
+                        <td>matemática</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>Física</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Química</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Biologia</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Médias de exatas</th>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">humanas</th>
+                        <td>história</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>Geografia</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Médias de humanas</th>
+                        <td>0.0</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela com colgroup-->
+
+        <table>
+            <colgroup>
+                <col class="cgrupo" span="2">
+                <col>
+                <col>
+                <col>
+            </colgroup>
+
+            <caption> Exercicio com <code>colgroup</code></caption>
+            <tr>
+                <th>nome</th>
+                <th>idade</th>
+                <th>sexo</th>
+                <th>peso</th>
+            </tr>
+            <tr>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+                <td>XXXXXXXXX</td>
+            </tr>
+        </table>
+
+        <h2>
+            Tópicos importantes
+        </h2>
+        <h3>
+            Escopo semântico do &ltth&gt
+        </h3>
+        <p>utilizar o atributo <code>scope=""</code> para informar o escopo dos cabeçalhos da tabela</p>
+        <h3>
+            Agrupar colunas
+        </h3>
+        <p>
+            utilizar <code>&ltcolgroup&gt</code> para agrupar e estilizar colunas
+        </p>
+    </main>
+</body>
+
+</html>
