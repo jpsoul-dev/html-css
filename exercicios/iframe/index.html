@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo iframe</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100vw;
+        }
+
+        iframe {
+            color: #fff;
+            width: 95vw;
+            height: 500px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <h1>Incluindo iframe na página</h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, odit ab. Libero, distinctio accusamus laborum
+            quia labore consectetur! Porro voluptatem, mollitia reprehenderit fugit velit beatae veritatis voluptate
+            repellendus necessitatibus officia?
+            Provident, fuga. Ducimus voluptatum laborum ratione esse atque aspernatur ex eos? Odio obcaecati eligendi
+            saepe tempora, dolor architecto porro ea voluptate accusantium temporibus, deserunt, est aspernatur!
+            Voluptatem natus minima aut!
+            Autem laudantium beatae vero, possimus hic debitis minus accusamus quis. Eveniet vero cum commodi?
+            Laboriosam labore amet cumque! Placeat eligendi temporibus asperiores iure nemo mollitia repudiandae dolor
+            cum voluptas corrupti.
+        </p>
+        <p>
+        <ul>
+            <li>
+                <a href="paginas/pag001.html" target="frame">pagina 1</a>
+            </li>
+            <li>
+                <a href="paginas/pag002.html" target="frame">Pagina 2</a>
+            </li>
+            <li>
+                <a href="paginas/pag003.html" target="frame"> Pagina 3</a>
+            </li>
+        </ul>
+        </p>
+
+        <iframe srcdoc="<h1>Conteúdo estático do iframe, carregado na inicialização</h1>" id="frame" name="frame">
+            <a href="https://www.cursoemvideo.com/">Curso Em Vídeo</a>
+        </iframe>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, odit ab. Libero, distinctio accusamus laborum
+            quia labore consectetur! Porro voluptatem, mollitia reprehenderit fugit velit beatae veritatis voluptate
+            repellendus necessitatibus officia?
+            Provident, fuga. Ducimus voluptatum laborum ratione esse atque aspernatur ex eos? Odio obcaecati eligendi
+            saepe tempora, dolor architecto porro ea voluptate accusantium temporibus, deserunt, est aspernatur!
+            Voluptatem natus minima aut!
+            Autem laudantium beatae vero, possimus hic debitis minus accusamus quis. Eveniet vero cum commodi?
+            Laboriosam labore amet cumque! Placeat eligendi temporibus asperiores iure nemo mollitia repudiandae dolor
+            cum voluptas corrupti.
+        </p>
+    </main>
+
+</body>
+
+</html>
