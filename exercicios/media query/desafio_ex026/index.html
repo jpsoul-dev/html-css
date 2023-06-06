@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <title>Desafio Media Query</title>
+
+</head>
+
+<body onresize="mudouTamanho()">
+
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer-menu" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+        <menu id="itens">
+            <li><a href="#">MENU 1</a></li>
+            <li><a href="#">MENU 2</a></li>
+            <li><a href="#">MENU 3</a></li>
+            <li><a href="#">MENU 4</a></li>
+            <li><a href="#">MENU 5</a></li>
+        </menu>
+    </header>
+
+    <main>
+        <section>
+            <h2>
+                Testando Media Query
+            </h2>
+
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laudantium! Animi sunt
+                    architecto dolore optio mollitia accusantium, sint, praesentium recusandae consequatur totam tenetur
+                    odio, neque ipsum minus eaque fugit incidunt.</span><span>Velit pariatur tempora placeat blanditiis
+                    modi! Odit quaerat voluptate enim repudiandae sunt quia alias amet voluptatibus corrupti quisquam,
+                    in molestias consequatur odio nisi non voluptatum ullam reiciendis rem deleniti
+                    dolorem.</span><span>Accusamus, mollitia distinctio debitis qui sint ipsum voluptas minima, minus
+                    iusto nemo sapiente sed quae voluptatibus nihil? Provident optio qui dicta hic reiciendis ipsam
+                    accusantium, veniam debitis velit. Accusantium, quasi.</span>
+            </p>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laudantium! Animi sunt
+                    architecto dolore optio mollitia accusantium, sint, praesentium recusandae consequatur totam tenetur
+                    odio, neque ipsum minus eaque fugit incidunt.</span><span>Velit pariatur tempora placeat blanditiis
+                    modi! Odit quaerat voluptate enim repudiandae sunt quia alias amet voluptatibus corrupti quisquam,
+                    in molestias consequatur odio nisi non voluptatum ullam reiciendis rem deleniti
+                    dolorem.</span><span>Accusamus, mollitia distinctio debitis qui sint ipsum voluptas minima, minus
+                    iusto nemo sapiente sed quae voluptatibus nihil? Provident optio qui dicta hic reiciendis ipsam
+                    accusantium, veniam debitis velit. Accusantium, quasi.</span>
+            </p>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, laudantium! Animi sunt
+                    architecto dolore optio mollitia accusantium, sint, praesentium recusandae consequatur totam tenetur
+                    odio, neque ipsum minus eaque fugit incidunt.</span><span>Velit pariatur tempora placeat blanditiis
+                    modi! Odit quaerat voluptate enim repudiandae sunt quia alias amet voluptatibus corrupti quisquam,
+                    in molestias consequatur odio nisi non voluptatum ullam reiciendis rem deleniti
+                    dolorem.</span><span>Accusamus, mollitia distinctio debitis qui sint ipsum voluptas minima, minus
+                    iusto nemo sapiente sed quae voluptatibus nihil? Provident optio qui dicta hic reiciendis ipsam
+                    accusantium, veniam debitis velit. Accusantium, quasi.</span>
+            </p>
+
+        </section>
+    </main>
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'none') {
+                itens.style.display = 'block';
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block';
+            } else {
+                itens.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
