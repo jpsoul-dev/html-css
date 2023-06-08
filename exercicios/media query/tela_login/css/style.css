@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 body {
@@ -45,12 +46,12 @@ section.login {
 
     transition: width .3s, height .3s;
     transition-timing-function: ease;
-    
+
 }
 
 div.img-login {
     display: block;
-    height: 200px;
+    height: 35%;
     background: var(--verde2) url("../img/montanha.jpg") no-repeat;
     background-size: cover;
     background-position: center;
@@ -58,6 +59,92 @@ div.img-login {
 }
 
 div.form-login {
-    display: block;
+    position: relative;
+    width: 100%;
+    height: 65%;
     padding: 12px 16px;
+}
+
+.form-login>h1 {
+    padding-bottom: 10px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.input{
+    position:relative;
+    height: 50px;
+    margin: 10px 0px;
+    padding: 8px;
+    background-color: var(--cinza);
+    border-radius: 6px;
+
+}
+
+.input > label{
+    display: none;
+}
+
+.input span{
+    width: 40px;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+.input input{
+    position: absolute;
+    width: calc(100% - 57px);
+    padding: 8px;
+    top:50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+
+form>button[type=submit] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    background-color: var(--verde3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form>button[type=submit]:hover {
+    background-color: var(--verde2);
+}
+
+#esqueci-senha{
+    display: block;
+    width:100%;
+    padding: 8px;
+    margin-top:4px;
+    color: var(--preto);
+    text-align: right;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+#esqueci-senha:active{
+    border: 1px solid red;
+}
+
+#esqueci-senha > span{
+    font-size: 1em;
+}
+#esqueci-senha:hover{
+    color:var(--verde3);
 }

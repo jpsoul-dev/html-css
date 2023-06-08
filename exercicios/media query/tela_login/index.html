@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Tela login</title>
 </head>
 
@@ -18,8 +19,31 @@
             </div>
 
             <div class="form-login">
-                <h1>Login</h1>
-                <p>Seja bem vindo</p>
+                <div class="container">
+                    <h1>Login</h1>
+                    <p>Seja bem vindo&#40;a&#41;!</p>
+
+                    <form action="" autocomplete="on">
+                        <div class="input">
+                            <span class="material-symbols-outlined">mail</span>
+                            <input type="email" id="email" placeholder="e-mail" required autocomplete="email">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="input">
+                            <span class="material-symbols-outlined">lock</span>
+                            <input type="password" id="pwd" placeholder="senha" required min="5"
+                                autocomplete="current-password">
+                            <label for="pwd">Senha</label>
+                        </div>
+                        <button type="submit">Acessar</button>
+                        <a href="esqueci.html" id="esqueci-senha">
+                            Esqueci a senha
+                            <span class="material-symbols-outlined">
+                                password
+                            </span>
+                        </a>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
