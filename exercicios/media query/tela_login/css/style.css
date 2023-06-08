@@ -65,7 +65,7 @@ div.form-login {
     padding: 12px 16px;
 }
 
-.form-login>h1 {
+.container>h1 {
     padding-bottom: 10px;
     font-size: 1.3em;
     text-align: center;
@@ -107,8 +107,11 @@ div.form-login {
     transform: translateY(-50%);
     border: none;
     border-radius: 5px;
-    background-color: white;
-    
+    background-color: white;   
+}
+
+.input input:focus{
+    outline: 1px solid #b9b9b9d2;
 }
 
 form>button[type=submit] {
@@ -119,12 +122,17 @@ form>button[type=submit] {
     background-color: var(--verde3);
     color: white;
     border: none;
+    outline: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 form>button[type=submit]:hover {
     background-color: var(--verde2);
+}
+
+form>button[type=submit]:focus {
+    outline: 1px solid var(--verde2);
 }
 
 #esqueci-senha{
@@ -136,10 +144,11 @@ form>button[type=submit]:hover {
     text-align: right;
     text-decoration: none;
     font-size: 0.8em;
+    outline: none;
 }
 
-#esqueci-senha:active{
-    border: 1px solid red;
+#esqueci-senha:focus{
+    outline: 1px solid #D9D7CC;
 }
 
 #esqueci-senha > span{
