@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/*Estudo flexbox*/
+.flex-container {
+
+    display: flex;
+    flex-direction: row;
+    /*row | row-reverse | column | column-reverse*/
+    flex-wrap: wrap-reverse;
+    /* nowrap | wrap | wrap-reverse */
+    flex-flow: column wrap;
+    /* shorthand: "flex-direction" | "flex-wrap"*/
+    justify-content: flex-start;
+    /* flex-start | flex-end | center | space-between | space-around | space-evenly*/
+    align-items: flex-end;
+    /*stretch | flex-start | flex-end | center | baseline*/
+    align-content: center;
+    /* stretch | flex-start | flex-end | center | space-between | space-around | sapce-evenly*/
+
+    width: 80vw;
+    height: 80vh;
+    background-color: #7A4A91;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px #0000005d;
+}
+
+.flex-item {
+    flex-shrink: 1;
+    /*capaciade de um item encolher para caber no flex-container*/
+    flex: none; /* <'flex-grow'> <'flex-shrink'> <'flex-basis'> */
+    
+    background-color: #F7941F;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 20%;
+    height: 15%;
+}
+
+.item{
+    flex-grow: 5;
+    /* Define a proporção para um item - os items não podem ter um width definido*/
+    flex-basis: fit-content;
+    /*auto | max-content | min-content | fit-content*/
+
+}
+
+
+
+/*Apenas para estido, não faz parte do estudo de flexbox*/
+.flex-item>span {
+    font: 5em verdana;
+    color: #fff;
+}
